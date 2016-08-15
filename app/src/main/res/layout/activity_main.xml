@@ -1,0 +1,262 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:gravity="left"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:resizeable="true"
+        tools:context=".MainActivity" >
+
+        <LinearLayout
+            android:id="@+id/adlayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rel_layout_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bodylayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adlayout1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rel_layout_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp" >
+
+                <TextView
+                    android:id="@+id/static_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Status: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/static_status"
+                    android:text="Not set!"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="1.2"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/static_message_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/static_status"
+                    android:text="Type of message: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_message_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/static_status"
+                    android:layout_toRightOf="@id/static_message_type"
+                    android:text="Not set!"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/static_contact_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/static_message_type"
+                    android:text="Contact name: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_contact_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/static_message_type"
+                    android:layout_toRightOf="@id/static_contact_name"
+                    android:text="Not set!"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/static_contact_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/static_contact_name"
+                    android:text="Contact number: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_contact_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/static_contact_name"
+                    android:layout_toRightOf="@id/static_contact_number"
+                    android:text="Not set!"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/static_radio_btn_message_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/static_contact_number"
+                    android:text="Select the type of message to send:"
+                    android:textColor="@color/white" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/static_radio_btn_message_type"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radio_button_naughty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:onClick="getMessageType"
+                        android:text="Naughty!"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_nice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:onClick="getMessageType"
+                        android:text="Nice!"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/static_select_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/radioGroup1"
+                    android:text="Select who will receive the message:"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/static_select_contact"
+                    android:layout_centerHorizontal="true"
+                    android:drawableLeft="@drawable/ic_martini2_selected"
+                    android:gravity="center|center_vertical"
+                    android:onClick="onClickSelectContact"
+                    android:text="Contact list"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/loginButtonLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btn_contact"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:weightSum="1.0" >
+
+                    <Button
+                        android:id="@+id/btn_previous"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:drawableLeft="@drawable/ic_martini2_selected"
+                        android:gravity="center|center_vertical"
+                        android:onClick="showPreviousMessage"
+                        android:text="Prior message"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btn_next"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:drawableLeft="@drawable/ic_martini2_selected"
+                        android:gravity="center|center_vertical"
+                        android:onClick="showNextMessage"
+                        android:text="Next message"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_activate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/loginButtonLayout"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_martini2_selected"
+                    android:gravity="center|center_vertical"
+                    android:onClick="verifySendMessage"
+                    android:text="Send message..."
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/static_message_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/btn_activate"
+                    android:text="Current message is..."
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_message_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/static_message_text"
+                    android:layout_marginTop="4dp"
+                    android:text="Not set!"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/tv_version"
+                    android:textColor="@color/white"
+                    android:text="Lazy Boyfriend " />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>
