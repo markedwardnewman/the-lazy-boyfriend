@@ -6,18 +6,18 @@ I had to get back into her good graces somehow. I needed to make a grand gesture
 
 "You know what doll? *I'm going to make an app for that!*"
   
-#[The Lazy Boyfriend](https://play.google.com/store/apps/details?id=com.thelazyboyfriend.app&hl=en)
-####*The* Android App for the ages...
+# [The Lazy Boyfriend](https://play.google.com/store/apps/details?id=com.thelazyboyfriend.app&hl=en)
+#### *The* Android App for the ages...
 
 
 ![](images/lazy-boyfriend-screenshot.jpg)
 
-####...but it's *not* for any of the following...
+#### ...but it's *not* for any of the following...
 
 - kiddos
-- the feint of heart
-- my grandma
-- anyone with an unhealthy balance of honor and dignity that is accompanied with an intense effort to identify oneself as a fragile and aggrieved victim
+- the too feint of heart
+- my grandma (unless you're my grandpa)
+- anyone with a fragile sense or humor coupled with an unhealthy determination to self-identify as an aggrieved victim without merit
 
-####Enjoy!
+#### Enjoy!
 
